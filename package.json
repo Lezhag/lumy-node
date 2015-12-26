@@ -1,0 +1,23 @@
+{
+  "name": "lumy-node",
+  "version": "1.0.0",
+  "description": "This is the home of Lumy flowers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lumy",
+    "flowers",
+    "corsages",
+    "arrangements",
+    "stand"
+  ],
+  "author": "oleg.glyb",
+  "dependencies": {
+    "express": "4.13.3"
+  },
+  "engines": {
+    "node": "4.1.1"
+  }
+}
