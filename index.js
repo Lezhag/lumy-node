@@ -27,7 +27,7 @@ app.get('/', function(request, response) {
 
 app.get('/send', function (request, response) {
     var mailOptions = {
-        to: request.query.to,
+        to: "miz.daniella@gmail.com",
         subject: request.query.subject,
         text: request.query.text
     };
