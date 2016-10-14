@@ -2,8 +2,17 @@
  * Created by Oleg on 26/12/2015.
  */
 var express = require('express');
+var nodeMailer = require('nodemailer');
+
 var app = express();
 
+var smtpTransport = nodemailer.createTransport("SMTP",{
+    service: "Gmail",
+    auth: {
+        user: "lumy.mailer@gmail.com",
+        pass: "n1NZgxUqJbQE"
+    }
+});
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
@@ -14,6 +23,24 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
     response.render('public/index');
+});
+
+app.get('/send', function (request, response) {
+    var mailOptions = {
+        to: request.query.to,
+        subject: request.query.subject,
+        text: request.query.text
+    };
+    console.log(mailOptions);
+    smtpTransport.sendMail(mailOptions, function (error, mailResponse) {
+        if (error) {
+            //console.log(error);
+            response.end("error: " + error);
+        } else {
+            //console.log("Message sent: " + mailResponse.message);
+            response.end("mail is sent");
+        }
+    })
 });
 
 app.listen(app.get('port'), function() {

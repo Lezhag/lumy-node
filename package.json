@@ -2,6 +2,7 @@
   "name": "lumy-node",
   "version": "1.0.0",
   "description": "This is the home of Lumy flowers",
+  "license": "UNLICENSED",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,9 +14,10 @@
     "arrangements",
     "stand"
   ],
-  "author": "oleg.glyb",
+  "author": "oleg.glyb@gmail.com",
   "dependencies": {
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "nodemailer": "^2.6.4"
   },
   "engines": {
     "node": "4.1.1"
