@@ -28,14 +28,14 @@ app.get('/', function(request, response) {
 app.get('/send', function (request, response) {
     var mailOptions = {
         to: "lumyflowers@gmail.com",
-        subject: request.query.fullName,
-        text: " שם" + request.query.fullName + "/n" +
-        " טלפון" + request.query.phone + "/n" +
-        " מייל" + request.query.email + "/n" +
-        " תאריך" + request.query.date + "/n" +
-        " שעה" + request.query.hour + "/n" +
-        " מקום האירוע" + request.query.place + "/n" +
-        " תיאור האירוע" + request.query.description + "/n"
+        subject: request.fullName,
+        text: " שם" + request.fullName + "/n" +
+        " טלפון" + request.phone + "/n" +
+        " מייל" + request.email + "/n" +
+        " תאריך" + request.date + "/n" +
+        " שעה" + request.hour + "/n" +
+        " מקום האירוע" + request.place + "/n" +
+        " תיאור האירוע" + request.description + "/n"
     };
     console.log(mailOptions);
     smtpTransport.sendMail(mailOptions, function (error, mailResponse) {
