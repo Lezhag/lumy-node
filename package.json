@@ -20,6 +20,6 @@
     "nodemailer": "^2.6.4"
   },
   "engines": {
-    "node": "4.1.1"
+    "node": "^10.0.0"
   }
 }
