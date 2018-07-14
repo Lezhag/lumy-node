@@ -16,7 +16,7 @@
   ],
   "author": "oleg.glyb@gmail.com",
   "dependencies": {
-    "express": "4.13.3",
+    "express": "^4.13.3",
     "nodemailer": "^2.6.4"
   },
   "engines": {
