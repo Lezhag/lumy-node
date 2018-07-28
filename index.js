@@ -13,7 +13,7 @@ var smtpTransport = nodeMailer.createTransport("SMTP",{
         pass: "n1NZgxUqJbQE"
     }
 });
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 8080));
 
 app.use(express.static(__dirname + '/public'));
 
