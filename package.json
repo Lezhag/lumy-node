@@ -16,8 +16,10 @@
   ],
   "author": "oleg.glyb@gmail.com",
   "dependencies": {
+    "debug": "~2.6.9",
     "express": "^4.13.3",
-    "nodemailer": "^2.6.4"
+    "ghost": "^2.2.0",
+    "pm2": "^3.2.2"
   },
   "engines": {
     "node": "^10.0.0"
